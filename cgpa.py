@@ -31,7 +31,7 @@ st.markdown(
 )
 
 # Grade Mapping
-GRADE_POINTS = {"O": 10, "A_": 9, "A": 8, "B_": 7, "B": 6, "C": 5}
+GRADE_POINTS = {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5}
 
 def calculate_cgpa(grades, credits):
     """Calculate CGPA based on grades and corresponding credits."""
@@ -65,4 +65,5 @@ if st.button("Calculate CGPA"):
         st.error("Total credits cannot be zero.")
     else:
         cgpa = calculate_cgpa(grades, credits)
-        st.success(f"Your CGPA is: **{cgpa:.2f}**")
+        st.success(f"Your GPA is: **{cgpa:.2f}**")
+        
